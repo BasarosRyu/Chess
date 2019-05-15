@@ -41,6 +41,7 @@
 	height: 90px;
 	margin-top: 10px;
 	display: inline-block;
+	text-align: center;
 }
 
 .case-a:last-child {
@@ -92,6 +93,6 @@
 }
 
 .casePossible {
-	background-color: crimson;
-	opacity: 0.5;
+	background-color: rgba( 220, 20, 60, 0.5);
+	z-index: 9;
 }

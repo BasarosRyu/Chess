@@ -1,6 +1,7 @@
 (function($) {
 	$.fn.plugin_chess=function() {
 
+
 		var letters = ['0', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 		var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -80,37 +81,35 @@
 
 			// on place les pions
 			for(i; i < 9; i++) {
-				$('[data-posx='+letters[i]+'][data-posy=2]').children('div').replaceWith('<img class="pieces" src="images/pionnoir.png" alt="pion.noir"/>');
-				$('[data-posx='+letters[i]+'][data-posy=7]').children('div').replaceWith('<img class="pieces" src="images/pionblanc.png" alt="pion.blanc"/>');
-				// $('[data-posx='+letters[i]+'][data-posy=2]').attr('data-occuped', 'yes');
-				// $('[data-posx='+letters[i]+'][data-posy=7]').attr('data-occuped', 'yes');
+				$('[data-posx='+letters[i]+'][data-posy=2]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/pionnoir.png" alt="pion.noir"/>');
+				$('[data-posx='+letters[i]+'][data-posy=7]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/pionblanc.png" alt="pion.blanc"/>');
 			}
 
 			// on place les tours
-			$('[data-posx=a][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/tournoir.png" alt="tour.noir"/>');
-			$('[data-posx=h][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/tournoir.png" alt="tour.noir"/>');
-			$('[data-posx=a][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/tourblanc.png" alt="tour.blanc"/>');
-			$('[data-posx=h][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/tourblanc.png" alt="tour.blanc"/>');
+			$('[data-posx=a][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/tournoir.png" alt="tour.noir"/>');
+			$('[data-posx=h][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/tournoir.png" alt="tour.noir"/>');
+			$('[data-posx=a][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/tourblanc.png" alt="tour.blanc"/>');
+			$('[data-posx=h][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/tourblanc.png" alt="tour.blanc"/>');
 
 			// on place les cavaliers
-			$('[data-posx=b][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/cavaliernoir.png" alt="cavalier.noir"/>');
-			$('[data-posx=g][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/cavaliernoir.png" alt="cavalier.noir"/>');
-			$('[data-posx=b][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/cavalierblanc.png" alt="cavalier.blanc"/>');
-			$('[data-posx=g][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/cavalierblanc.png" alt="cavalier.blanc"/>');
+			$('[data-posx=b][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/cavaliernoir.png" alt="cavalier.noir"/>');
+			$('[data-posx=g][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/cavaliernoir.png" alt="cavalier.noir"/>');
+			$('[data-posx=b][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/cavalierblanc.png" alt="cavalier.blanc"/>');
+			$('[data-posx=g][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/cavalierblanc.png" alt="cavalier.blanc"/>');
 
 			// on place les fous
-			$('[data-posx=c][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/founoir.png" alt="fou.noir"/>');
-			$('[data-posx=f][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/founoir.png" alt="fou.noir"/>');
-			$('[data-posx=c][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/foublanc.png" alt="fou.blanc"/>');
-			$('[data-posx=f][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/foublanc.png" alt="fou.blanc"/>');
+			$('[data-posx=c][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/founoir.png" alt="fou.noir"/>');
+			$('[data-posx=f][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/founoir.png" alt="fou.noir"/>');
+			$('[data-posx=c][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/foublanc.png" alt="fou.blanc"/>');
+			$('[data-posx=f][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/foublanc.png" alt="fou.blanc"/>');
 
 			// on place les reines
-			$('[data-posx=d][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/damenoir.png" alt="dame.noir"/>');
-			$('[data-posx=d][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/dameblanc.png" alt="dame.blanc"/>');
+			$('[data-posx=d][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/damenoir.png" alt="dame.noir"/>');
+			$('[data-posx=d][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/dameblanc.png" alt="dame.blanc"/>');
 
 			// on place les rois
-			$('[data-posx=e][data-posy=1]').children('div').replaceWith('<img class="pieces" src="images/roinoir.png" alt="roi.noir"/>');
-			$('[data-posx=e][data-posy=8]').children('div').replaceWith('<img class="pieces" src="images/roiblanc.png" alt="roi.blanc"/>');
+			$('[data-posx=e][data-posy=1]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/roinoir.png" alt="roi.noir"/>');
+			$('[data-posx=e][data-posy=8]').children('div').replaceWith('<img class="pieces" data-position="initial" src="images/roiblanc.png" alt="roi.blanc"/>');
 
 			// on change les data-occuped en yes
 			for(l; l < listSpanOccuped.length; l++) {
@@ -142,44 +141,7 @@
 		$('.grille').css('width', '900px');
 		makeChessboard();
 
-		/***********************************************************************\
-							Partie pour les mouvements
-		\***********************************************************************/
 
-		// mouvements pour le pion
-		function movePion(param, bool) {
-			if(bool == true) {
-				if(param.children().attr('alt') != undefined) {
-					if(param.children().attr('alt') == 'pion.noir') {
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) +1) +'"]').addClass('casePossible');
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) +2) +'"]').addClass('casePossible');
-
-						movesPossibles = ['' + param.attr('data-posx') + (parseInt(param.attr('data-posy'))+1) + '', '' + param.attr('data-posx')+(parseInt(param.attr('data-posy')) +2) +''];
-					}
-					if(param.children().attr('alt') == 'pion.blanc') {
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -1) +'"]').addClass('casePossible');
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -2) +'"]').addClass('casePossible');
-
-						movesPossibles = ['[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -1) +'"]', '[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -2) +'"]'];
-
-					}
-				}
-			}
-			if(bool == false) {
-				if(param.children().attr('alt') != undefined) {
-					if(param.children().attr('alt') == 'pion.noir') {
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) +1) +'"]').removeClass('casePossible');
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) +2) +'"]').removeClass('casePossible');
-					}
-					if(param.children().attr('alt') == 'pion.blanc') {
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -1) +'"]').removeClass('casePossible');
-						$('[data-posx="'+ param.attr('data-posx') +'"][data-posy="'+ (parseInt(param.attr('data-posy')) -2) +'"]').removeClass('casePossible');
-					}
-				}
-			}
-		}
-
-		// $('[data-posx="'+ ($(element).data('posx') +1) +'"][data-posy="'+ $(element).data('posy') +'"]').data('color');
 
 		/***********************************************************************\
 							Partie pour les animations de jeux
@@ -229,21 +191,35 @@
 						            selectPieces = true;
 						            $(this).addClass('caseSelected');
 									$('.carre').removeClass('casePossible');
+
 									movePion($(this), true);
 								}
 							}
 						}
 					}
 				}
-				if($(this).children().attr('alt') == undefined) {
-					// on doit vérifier si la case sélectionnée est disponible dans la liste de moves possibles
-						var choice = $(this).attr('data-posx') + $(this).attr('data-posy');
-						if(movesPossibles.indexOf(choice) != -1) {
-							console.log('mouvemnt possible');
+				if($(this).children().attr('alt') == undefined) { // si la case contient bien une pièce
+					var choice = $(this).attr('data-posx') + $(this).attr('data-posy');
+					if(movesPossibles.indexOf(choice) != -1) {
+						if($(this).attr('data-occuped') == 'no') {
+							var deplacePiece = $('[data-posx="'+ piecesCoordX +'"][data-posy="'+ piecesCoordY +'"]').children().clone();
+
+							$('[data-posx="'+ piecesCoordX +'"][data-posy="'+ piecesCoordY +'"]').children().replaceWith('<div class="positiony">'+ piecesCoordY  +'</div>');
+							$('[data-posx="'+ piecesCoordX +'"][data-posy="'+ piecesCoordY +'"]').attr('data-occuped', 'no');
+
+							$(this).children('div').replaceWith(deplacePiece);
+							$(this).children().attr('data-position', 'modified');
+
+							$(this).attr('data-occuped', 'yes');
+
+							$('.carre').removeClass('casePossible');
+							$($('[data-posx="'+ piecesCoordX +'"][data-posy="'+ piecesCoordY +'"]')).removeClass('caseSelected');
+							piecesCoordX = '';
+							piecesCoordY = '';
+							selectPieces = false;
+							movePion($('[data-posx="'+ piecesCoordX +'"][data-posy="'+ piecesCoordY +'"]'), false);
 						}
-						else {
-							console.log('et non désolé');
-						}
+					}
 				}
 			}
 		});
