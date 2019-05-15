@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Echecs</title>
+		<link rel="stylesheet" type="text/css" href="chess.css">
+	</head>
+	<body>
+		<header>
+			<center><h1>Parties d'échecs !</h1></center>
+		</header>
+		<main>
+			<div id="echecs"></div>
+		</main>
+
+		<footer>
+
+		</footer>
+		<script src="jquery.js"></script>
+		<script src="plugin_echecs.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(function(){
+					$('#echecs').plugin_chess();
+				});
+			});
+		</script>
+	</body>
+</html>

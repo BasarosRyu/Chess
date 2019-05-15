@@ -1,0 +1,97 @@
+/* partie pour la création du plateau et l'affichage des pièces */
+.partGame {
+	width: 80%;
+	position: absolute;
+	left: 20%;
+	top: 20%;
+}
+
+.grille {
+	height: 100px;
+	margin: 0 auto;
+	padding: 1px;
+}
+
+.row, .rowlast {
+    text-align: center;
+	margin-top: -5px;
+}
+
+.row:first-child {
+	margin-top: 0px;
+}
+
+.carre {
+	width: 90px;
+	height: 90px;
+    border: 1px solid black;
+	background-color: white;
+    display: flex;
+	float: left;
+	line-height: 90px;
+	text-align: center;
+}
+
+.carregrey {
+	background-color: grey;
+}
+
+.case-a {
+	width: 90px;
+	height: 90px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.case-a:last-child {
+	width: 90px;
+	margin-top: -15px;
+	height: 90px;
+	visibility: hidden;
+}
+
+.case-1 {
+	text-align: left;
+    border: 1px solid white;
+}
+
+.positiony {
+	padding-top: 20px;
+	padding-left: 10px;
+	visibility: hidden;
+}
+
+.visible {
+	padding-top: 20px;
+	visibility: visible;
+}
+
+.pieces {
+	height: 70px;
+	width: 70px;
+	margin:auto;
+	z-index: 999;
+}
+
+
+/* menu */
+
+.menu {
+	position: absolute;
+	border: 1px solid grey;
+	width: 20%;
+	height: 100%;
+	top: 20%;
+}
+
+/* Changer la couleur de la case au survol*/
+
+.hover, .caseSelected {
+	background-color: crimson;
+	z-index: 9;
+}
+
+.casePossible {
+	background-color: crimson;
+	opacity: 0.5;
+}
